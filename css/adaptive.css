@@ -1,0 +1,132 @@
+@media screen and (max-width: 1330px) {
+  .carousel-row--img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 1245px) {
+  .right-content__info-span {
+    display: none;
+    opacity: 0;
+  }
+  .right-content__info-by {
+    display: block;
+  }
+  .right-content__btn {
+    display: flex;
+    margin: 6px;
+  }
+  .right-content__how-much {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1235px) {
+  .right-content__property {
+    display: block;
+  }
+  .right-content__property-item {
+    margin: 5px;
+  }
+  .container {
+    grid-template-columns: 100px 2fr 1fr;
+  }
+  .menu {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .center-content {
+    min-width: 100%;
+  }
+  .center-content__friends-members {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .menu__items {
+    /* display: none; */
+    display: flex;
+    opacity: 0;
+    flex-direction: row;
+    transition: 5s;
+    align-items: center;
+    padding-top: 0;
+  }
+  .menu__options {
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu__logout {
+    margin: 15px;
+  }
+  .menu {
+    width: 100%;
+  }
+  .menu__burger {
+    width: 100%;
+    justify-content: left;
+  }
+  .menu__burger svg {
+    margin: 20px;
+  }
+  .menu__items.open {
+    display: flex;
+    opacity: 1;
+    transition: 5s;
+  }
+  .container {
+    display: block;
+  }
+  .friends {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .right-content__btn {
+    display: inline-flex;
+  }
+  .right-content__property {
+    display: flex;
+  }
+}
+@media screen and (max-width: 600px) {
+  .slider__top-buttons {
+    margin-top: 10px;
+    position: static;
+    transform: none;
+  }
+  .slider__top-btn_active::before,
+  .slider__top-btn_active::after {
+    background: transparent;
+  }
+  .slider__content-block {
+    margin-left: 25px;
+  }
+  .center-content__actions {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .menu__items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  .canvas {
+    height: 220px;
+  }
+  .friends {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .menu__options {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .menu__item {
+    margin: 30px;
+  }
+}

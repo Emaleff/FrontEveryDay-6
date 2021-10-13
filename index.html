@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/adaptive.css" />
+    <title>6</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <div class="menu__burger">
+          <svg
+            width="18"
+            id="burger"
+            height="14"
+            viewBox="0 0 18 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              y1="1.25"
+              x2="18"
+              y2="1.25"
+              stroke="#F6F7FB"
+              stroke-width="1.5"
+            />
+            <line
+              y1="7.25"
+              x2="18"
+              y2="7.25"
+              stroke="#F6F7FB"
+              stroke-width="1.5"
+            />
+            <line
+              y1="13.25"
+              x2="9"
+              y2="13.25"
+              stroke="#F6F7FB"
+              stroke-width="1.5"
+            />
+          </svg>
+        </div>
+        <div class="menu__items">
+          <div class="menu__options">
+            <div class="menu__item menu__item_active" data-atr="item">
+              <div class="menu__item-svg menu__item-svg_active">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5 22C3.34315 22 2 20.6568 2 19V11.3361C2 10.4856 2.36096 9.67512 2.99311 9.10619L9.9931 2.80619C11.134 1.77937 12.866 1.77937 14.0069 2.80619L21.0069 9.10619C21.639 9.67512 22 10.4856 22 11.3361V19C22 20.6568 20.6569 22 19 22H5ZM20.5 11.3361V19C20.5 19.8284 19.8284 20.5 19 20.5H16V15C16 13.3431 14.6569 12 13 12H11C9.34315 12 8 13.3431 8 15V20.5H5C4.17157 20.5 3.5 19.8284 3.5 19V11.3361C3.5 10.9108 3.68048 10.5056 3.99655 10.2211L10.9966 3.92113C11.567 3.40772 12.433 3.40772 13.0034 3.92113L20.0034 10.2211C20.3195 10.5056 20.5 10.9108 20.5 11.3361ZM9.5 20.5V15C9.5 14.1716 10.1716 13.5 11 13.5H13C13.8284 13.5 14.5 14.1716 14.5 15V20.5H9.5Z"
+                  />
+                </svg>
+              </div>
+              <div class="menu__item-text menu__item-text_active">
+                Dashboard
+              </div>
+            </div>
+            <div class="menu__item" data-atr="item">
+              <div class="menu__item-svg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7 2.25C7.41421 2.25 7.75 2.58579 7.75 3V4H16.25V3C16.25 2.58579 16.5858 2.25 17 2.25C17.4142 2.25 17.75 2.58579 17.75 3V4H19C20.6569 4 22 5.34315 22 7V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V7C2 5.34315 3.34315 4 5 4H6.25V3C6.25 2.58579 6.58579 2.25 7 2.25ZM16.25 5.5V7C16.25 7.41421 16.5858 7.75 17 7.75C17.4142 7.75 17.75 7.41421 17.75 7V5.5H19C19.8284 5.5 20.5 6.17157 20.5 7V10.25H3.5V7C3.5 6.17157 4.17157 5.5 5 5.5H6.25V7C6.25 7.41421 6.58579 7.75 7 7.75C7.41421 7.75 7.75 7.41421 7.75 7V5.5H16.25ZM3.5 11.75V19C3.5 19.8284 4.17157 20.5 5 20.5H19C19.8284 20.5 20.5 19.8284 20.5 19V11.75H3.5Z"
+                  />
+                </svg>
+              </div>
+              <div class="menu__item-text">Upcoming</div>
+            </div>
+            <div class="menu__item" data-atr="item">
+              <div class="menu__item-svg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 20.5C16.6944 20.5 20.5 16.6944 20.5 12C20.5 7.30558 16.6944 3.5 12 3.5C7.30558 3.5 3.5 7.30558 3.5 12C3.5 16.6944 7.30558 20.5 12 20.5ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.9368 9.06319L10.8779 10.5853C10.7427 10.636 10.636 10.7427 10.5853 10.8779L9.06319 14.9368L13.1221 13.4147C13.2573 13.364 13.364 13.2573 13.4147 13.1221L14.9368 9.06319ZM15.4401 7.27246L10.3512 9.18079C9.81036 9.38361 9.38361 9.81035 9.18079 10.3512L7.27246 15.4401C6.97101 16.244 7.75603 17.029 8.55992 16.7275L13.6488 14.8192C14.1896 14.6164 14.6164 14.1896 14.8192 13.6488L16.7275 8.55992C17.029 7.75603 16.244 6.97101 15.4401 7.27246Z"
+                  />
+                </svg>
+              </div>
+              <div class="menu__item-text">Explore</div>
+            </div>
+            <div class="menu__item" data-atr="item">
+              <div class="menu__item-svg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 10.5C13.933 10.5 15.5 8.933 15.5 7C15.5 5.067 13.933 3.5 12 3.5C10.067 3.5 8.5 5.067 8.5 7C8.5 8.933 10.067 10.5 12 10.5ZM12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9 15.75C6.65279 15.75 4.75 17.6528 4.75 20V21C4.75 21.4142 4.41421 21.75 4 21.75C3.58579 21.75 3.25 21.4142 3.25 21V20C3.25 16.8244 5.82436 14.25 9 14.25H15C18.1756 14.25 20.75 16.8244 20.75 20V21C20.75 21.4142 20.4142 21.75 20 21.75C19.5858 21.75 19.25 21.4142 19.25 21V20C19.25 17.6528 17.3472 15.75 15 15.75H9Z"
+                  />
+                </svg>
+              </div>
+              <div class="menu__item-text">Profile</div>
+            </div>
+            <div class="menu__item" data-atr="item">
+              <div class="menu__item-svg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 14.5C13.3807 14.5 14.5 13.3807 14.5 12C14.5 10.6193 13.3807 9.5 12 9.5C10.6193 9.5 9.5 10.6193 9.5 12C9.5 13.3807 10.6193 14.5 12 14.5ZM16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.9047 2.84189L10.5172 4.00455C10.1904 4.9849 9.47329 5.67937 8.72212 6.09762C8.65807 6.13329 8.59465 6.16997 8.53188 6.20765C7.79322 6.65109 6.83191 6.92568 5.81829 6.71826L4.61651 6.47233C4.40566 6.42918 4.19086 6.5258 4.08326 6.71218L3.46227 7.78775C3.35467 7.97413 3.3784 8.20846 3.52119 8.36949L4.33621 9.2886C5.02026 10.06 5.26522 11.0268 5.25157 11.8882C5.25039 11.9627 5.25039 12.0373 5.25157 12.1118C5.26521 12.9732 5.02025 13.9399 4.33621 14.7113L3.52119 15.6304C3.3784 15.7915 3.35467 16.0258 3.46228 16.2122L4.08326 17.2878C4.19086 17.4741 4.40566 17.5707 4.61651 17.5276L5.8182 17.2817C6.83184 17.0743 7.79316 17.3489 8.53183 17.7923C8.59461 17.83 8.65805 17.8667 8.72212 17.9024C9.47329 18.3206 10.1904 19.0151 10.5172 19.9955L10.9047 21.1581C10.9728 21.3623 11.1638 21.5 11.3791 21.5H12.621C12.8362 21.5 13.0273 21.3623 13.0954 21.1581L13.4829 19.9955C13.8097 19.0151 14.5268 18.3206 15.2779 17.9024C15.342 17.8667 15.4054 17.83 15.4682 17.7923C16.2069 17.3489 17.1682 17.0743 18.1819 17.2817L19.3835 17.5276C19.5944 17.5707 19.8092 17.4741 19.9168 17.2878L20.5377 16.2122C20.6453 16.0258 20.6216 15.7915 20.4788 15.6304L19.6639 14.7114C18.9798 13.94 18.7348 12.9732 18.7485 12.1118C18.7497 12.0373 18.7497 11.9627 18.7485 11.8882C18.7348 11.0267 18.9798 10.06 19.6639 9.28855L20.4788 8.36949C20.6216 8.20846 20.6453 7.97414 20.5377 7.78775L19.9168 6.71218C19.8092 6.5258 19.5944 6.42919 19.3835 6.47233L18.1818 6.71825C17.1682 6.92567 16.2068 6.65108 15.4682 6.20765C15.4054 6.16997 15.342 6.13329 15.2779 6.09762C14.5268 5.67937 13.8097 4.9849 13.4829 4.00455L13.0954 2.84189C13.0273 2.63771 12.8362 2.5 12.621 2.5H11.3791C11.1638 2.5 10.9728 2.63771 10.9047 2.84189ZM9.09413 3.53021C8.91189 4.07694 8.49591 4.50673 7.9924 4.78709C7.91408 4.83069 7.83655 4.87554 7.75983 4.9216C7.26514 5.21857 6.68428 5.36439 6.11901 5.24871L4.91723 5.00278C4.07385 4.8302 3.21465 5.21665 2.78422 5.96218L2.16324 7.03775C1.73281 7.78328 1.82773 8.72059 2.39888 9.36469L3.21391 10.2838C3.59582 10.7145 3.76088 11.2889 3.75176 11.8644C3.75033 11.9548 3.75033 12.0452 3.75176 12.1355C3.76087 12.7111 3.59582 13.2854 3.21391 13.7161L2.39888 14.6352C1.82773 15.2793 1.73281 16.2167 2.16324 16.9622L2.78422 18.0378C3.21465 18.7833 4.07385 19.1697 4.91723 18.9971L6.11892 18.7512C6.68421 18.6356 7.26507 18.7814 7.75977 19.0784C7.83651 19.1244 7.91406 19.1693 7.9924 19.2129C8.49591 19.4933 8.91189 19.9231 9.09413 20.4698L9.48169 21.6325C9.75391 22.4491 10.5182 23 11.3791 23H12.621C13.4819 23 14.2462 22.4491 14.5184 21.6325L14.9059 20.4698C15.0882 19.9231 15.5042 19.4933 16.0077 19.2129C16.086 19.1693 16.1635 19.1244 16.2403 19.0784C16.735 18.7814 17.3158 18.6356 17.8811 18.7512L19.0828 18.9971C19.9262 19.1697 20.7854 18.7833 21.2158 18.0378L21.8368 16.9622C22.2672 16.2167 22.1723 15.2793 21.6011 14.6352L20.7862 13.7162C20.4042 13.2855 20.2392 12.7111 20.2483 12.1356C20.2497 12.0452 20.2497 11.9548 20.2483 11.8644C20.2392 11.2888 20.4042 10.7144 20.7862 10.2838L21.6011 9.36469C22.1723 8.72059 22.2672 7.78328 21.8368 7.03775L21.2158 5.96218C20.7854 5.21666 19.9262 4.8302 19.0828 5.00279L17.881 5.2487C17.3158 5.36438 16.7349 5.21857 16.2402 4.92159C16.1635 4.87554 16.086 4.83069 16.0077 4.78709C15.5042 4.50673 15.0882 4.07694 14.9059 3.53021L14.5184 2.36754C14.2462 1.55086 13.4819 1 12.621 1H11.3791C10.5182 1 9.75391 1.55086 9.48168 2.36754L9.09413 3.53021Z"
+                  />
+                </svg>
+              </div>
+              <div class="menu__item-text">Settings</div>
+            </div>
+          </div>
+          <div class="menu__item menu__logout">
+            <div class="menu__item-svg">
+              <img src="./images/logout.svg" alt="" />
+            </div>
+            <div class="menu__item-text">Logout</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-content">
+        <div class="center-content__header">
+          <div class="center-content__title">Shikra.</div>
+          <div class="center-content__actions">
+            <input
+              type="text"
+              placeholder="Search"
+              class="center-content__input"
+            />
+            <button class="center-content__button">
+              <img src="./images/tune.svg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="center-content__slider slider">
+          <div class="slider__title">
+            <img src="./images/slider-title-img.svg" alt="" />
+            <span class="slider__title-text"> Explore</span>
+          </div>
+          <div class="slider__top-buttons">
+            <button class="slider__top-btn" data-slider="America">
+              America
+            </button>
+            <button
+              class="slider__top-btn slider__top-btn_active"
+              data-slider="Sights"
+            >
+              Sights
+            </button>
+            <button class="slider__top-btn" data-slider="Europe">Europe</button>
+          </div>
+          <div class="slider__content-block">
+            <div class="slider__content" data-slider-content="America">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/america1.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">New York</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Usa</span>
+                        </div>
+                        <div class="wrapp__how-much">$0,001</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/america2.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">New York</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Usa</span>
+                        </div>
+                        <div class="wrapp__how-much">$0,101</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/america3.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Los angeles</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Usa</span>
+                        </div>
+                        <div class="wrapp__how-much">$0,111</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/america4.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Los Angeles</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Usa</span>
+                        </div>
+                        <div class="wrapp__how-much">$3,001</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/america5.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Miami</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Usa</span>
+                        </div>
+                        <div class="wrapp__how-much">$0,001</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/america6.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Miami</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Usa</span>
+                        </div>
+                        <div class="wrapp__how-much">$0,001</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+            <div
+              class="slider__content slider__content_active"
+              data-slider-content="Sights"
+            >
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/sights1.png" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Phi Phi Islands</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Thailand</span>
+                        </div>
+                        <div class="wrapp__how-much">$1,480</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/sights2.png" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Kudahuvadhoo Island</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Maldives</span>
+                        </div>
+                        <div class="wrapp__how-much">$1,480</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/sights3.png" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Курильские острова</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Россия</span>
+                        </div>
+                        <div class="wrapp__how-much">$9,999</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/sights4.png" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Новосибирские острова</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Россия</span>
+                        </div>
+                        <div class="wrapp__how-much">$9,999</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/sights5.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Остров Сахалин</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Россия</span>
+                        </div>
+                        <div class="wrapp__how-much">$9,999</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+            <div class="slider__content" data-slider-content="Europe">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/europe1.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Milan</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Italy</span>
+                        </div>
+                        <div class="wrapp__how-much">$2,001</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/europe2.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Madrid</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Spain</span>
+                        </div>
+                        <div class="wrapp__how-much">$1,001</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/europe3.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">London</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text"
+                            >Great britain</span
+                          >
+                        </div>
+                        <div class="wrapp__how-much">$2,001</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/europe4.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Paris</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">France</span>
+                        </div>
+                        <div class="wrapp__how-much">$2,001</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/europe5.jpeg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Berlin</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Germany</span>
+                        </div>
+                        <div class="wrapp__how-much">$5,001</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="wrapp">
+                      <div class="wrapp__img">
+                        <img src="./images/europe1.jpg" alt="" />
+                        <div class="wrapp__favorites">
+                          <img src="./images/favorites.svg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrapp__title">Milan</div>
+                      <div class="wrapp__info">
+                        <div class="wrapp__location">
+                          <img src="./images/location.svg" alt="" />
+                          <span class="wrapp__location__text">Italy</span>
+                        </div>
+                        <div class="wrapp__how-much">$2,001</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="center-content__friends-members">
+          <div class="center-content__friends friends">
+            <div class="friends__header">
+              <div class="friends__title">
+                <img
+                  src="./images/friends-title.svg"
+                  alt=""
+                  class="friends__img"
+                />
+                <span class="friends__title-text">Invite Friends</span>
+              </div>
+              <div class="friends__more">
+                <img src="./images/more.svg" alt="" />
+              </div>
+            </div>
+            <div class="friends__cards cards">
+              <div class="card card_bg1">
+                <div class="card__circle">
+                  <img src="./images/head1.png" alt="" />
+                </div>
+                <div class="card__name">Nate</div>
+                <div class="card__actions card_bg1">
+                  <img src="./images/card-actions1.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="card card_bg2">
+                <div class="card__circle">
+                  <img src="./images/head2.png" alt="" />
+                </div>
+                <div class="card__name">Jim</div>
+                <div class="card__actions card_bg2">
+                  <img src="./images/card-actions1.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="card card_bg3">
+                <div class="card__circle">
+                  <img src="./images/head3.png" alt="" />
+                </div>
+                <div class="card__name">Angela</div>
+                <div class="card__actions card_bg3">
+                  <img src="./images/card-actions3.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="card card_bg4">
+                <div class="card__circle">
+                  <img src="./images/head4.png" alt="" />
+                </div>
+                <div class="card__name">Bhaaji</div>
+                <div class="card__actions card_bg4">
+                  <img src="./images/card-actions4.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="card card_bg5">
+                <div class="card__circle">
+                  <img src="./images/head5.png" alt="" />
+                </div>
+                <div class="card__name">Billo</div>
+                <div class="card__actions card_bg5">
+                  <img src="./images/card-actions4.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="card card_bg6">
+                <div class="card__circle">
+                  <img src="./images/head6.png" alt="" />
+                </div>
+                <div class="card__name">Alex</div>
+                <div class="card__actions card_bg6">
+                  <img src="./images/card-actions4.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="center-content__members members">
+            <div class="members__header">
+              <div class="members__title">
+                <img
+                  src="./images/members-title.svg"
+                  alt=""
+                  class="members__img"
+                />
+                <span class="members__title-text">Members</span>
+              </div>
+              <div class="members__more">
+                <img src="./images/more.svg" alt="" />
+              </div>
+            </div>
+            <div class="members__canvas">
+              <div class="canvas">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="right-content__container">
+          <div class="right-content__top-img">
+            <img src="./images/right-image.png" alt="" />
+          </div>
+          <div class="right-content__top-img-title">
+            25 Lakeland Terrace, Westland, Michigan, USA
+          </div>
+          <div class="right-content__info-favorites">
+            <div class="right-content__info">
+              Apartment
+              <span class="right-content__info-span"> | </span>
+              <span class="right-content__info-by"> by Robbin Johnson</span>
+            </div>
+            <img
+              src="./images/right-content-favorites.svg"
+              class="right-content__favorites"
+              alt=""
+            />
+          </div>
+          <div class="right-content__actions">
+            <div class="right-content__btns">
+              <div class="right-content__btn">
+                <img src="./images/btn1.svg" alt="" />
+              </div>
+              <div class="right-content__btn">
+                <img src="./images/btn2.svg" alt="" />
+              </div>
+              <div class="right-content__btn">
+                <img src="./images/btn3.svg" alt="" />
+              </div>
+            </div>
+            <div class="right-content__how-much">$ 2,900.00</div>
+          </div>
+          <div class="right-content__property">
+            <div class="right-content__property-item">
+              <img src="./images/property1.svg" alt="" />
+              <span>Used property</span>
+            </div>
+            <div class="right-content__property-item">
+              <img src="./images/property2.svg" alt="" />
+              <span>4</span>
+            </div>
+            <div class="right-content__property-item">
+              <img src="./images/property3.svg" alt="" />
+              <span>170 m2</span>
+            </div>
+          </div>
+          <div class="right-content__map">
+            <div id="map"></div>
+          </div>
+          <div class="right-content__photos">
+            <div class="right-content__photos-top-block">
+              <div class="rights__photos-top-title">Photos</div>
+              <div class="right__more">
+                <img src="./images/more.svg" alt="" />
+              </div>
+            </div>
+
+            <!-- <div class="img-container">
+              <img src="./images/img1.png" alt="" />
+              <img src="./images/img2.png" alt="" />
+              <img src="./images/img3.png" alt="" />
+              <img src="./images/img4.png" alt="" />
+              <img src="./images/img5.png" alt="" />
+              <img src="./images/img6.png" alt="" />
+            </div> -->
+
+            <div class="carousel-row">
+              <div class="carousel-row--img">
+                <!-- <img
+                  src="https://i.ibb.co/R2NSmwm/bath-img-Desktop.jpg"
+                  class="hover-shadow"
+                /> -->
+                <img src="./images/img1.png" class="hover-shadow" alt="" />
+              </div>
+              <div class="carousel-row--img">
+                <img src="./images/img2.png" class="hover-shadow" />
+              </div>
+              <div class="carousel-row--img">
+                <img src="./images/img3.png" class="hover-shadow" />
+              </div>
+              <div class="carousel-row--img">
+                <img src="./images/img4.png" class="hover-shadow" />
+              </div>
+              <div class="carousel-row--img">
+                <img src="./images/img5.png" class="hover-shadow" />
+              </div>
+              <div class="carousel-row--img">
+                <img src="./images/img6.png" class="hover-shadow" />
+              </div>
+            </div>
+
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal no-select">
+              <span class="close cursor">&times;</span>
+              <!-- Next/previous controls -->
+              <a class="prev no-select">&#10094;</a>
+              <a class="next no-select">&#10095;</a>
+              <div class="modal-content">
+                <div class="my-slides">
+                  <div class="my-slides--number"></div>
+                  <!-- <img src="https://i.ibb.co/R2NSmwm/bath-img-Desktop.jpg" /> -->
+                  <img src="./images/img1.png" alt="" />
+                </div>
+
+                <div class="my-slides">
+                  <div class="my-slides--number"></div>
+                  <img src="./images/img2.png" />
+                </div>
+
+                <div class="my-slides">
+                  <div class="my-slides--number"></div>
+                  <img src="./images/img3.png" />
+                </div>
+
+                <div class="my-slides">
+                  <div class="my-slides--number"></div>
+                  <img src="./images/img4.png" />
+                </div>
+
+                <div class="my-slides">
+                  <div class="my-slides--number"></div>
+                  <img src="./images/img5.png" />
+                </div>
+
+                <div class="my-slides">
+                  <div class="my-slides--number"></div>
+                  <img src="./images/img6.png" />
+                </div>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls -->
+                <div class="column-box">
+                  <div class="column">
+                    <img src="./images/img1.png" class="demo" alt="" />
+                  </div>
+
+                  <div class="column">
+                    <img class="demo" src="./images/img2.png" alt="" />
+                  </div>
+
+                  <div class="column">
+                    <img class="demo" src="./images/img3.png" alt="" />
+                  </div>
+
+                  <div class="column">
+                    <img class="demo" src="./images/img4.png" alt="" />
+                  </div>
+
+                  <div class="column">
+                    <img class="demo" src="./images/img5.png" alt="" />
+                  </div>
+                  <div class="column">
+                    <img class="demo" src="./images/img6.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB2_cLfq2EWxfHXNIPWVId2lzaTsUDpRc&callback=initMap"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
