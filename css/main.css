@@ -2,6 +2,23 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: "GoogleSans";
+  src: url("../fonts/GoogleSans-Regular.ttf");
+}
+@font-face {
+  font-family: "SofiaPro";
+  src: url("../fonts/SofiaProRegular.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("../fonts/Gilroy-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Semibold";
+  src: url("../fonts/Gilroy-Semibold.ttf");
+}
 .container {
   display: grid;
   grid-template-columns: 131px 2fr 1fr;
@@ -79,7 +96,7 @@
 }
 .menu__item-text {
   margin-top: 16px;
-  font-family: Google Sans, sans-serif;
+  font-family: GoogleSans, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -108,7 +125,7 @@
   box-sizing: border-box;
 }
 .center-content__title {
-  font-family: Gilroy-SemiBold, sans-serif;
+  font-family: Gilroy-Semibold, sans-serif;
   font-size: 26px;
   line-height: 30px;
   color: #000000;
@@ -168,11 +185,11 @@
   box-sizing: border-box;
   background: #ffffff;
   box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05),
-    0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963),
-    0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704),
+    0px 64.8148px 46.8519px rgba(153, 165, 236, 0.03),
+    0px 38.5185px 25.4815px rgba(153, 165, 236, 0.03),
     0px 20px 13px rgba(153, 165, 236, 0.025),
-    0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296),
-    0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
+    0px 8.14815px 6.51852px rgba(153, 165, 236, 0.02),
+    0px 1.85185px 3.14815px rgba(153, 165, 236, 0.01);
   border-radius: 25px;
 }
 .wrapp {
@@ -270,17 +287,14 @@
   opacity: 1;
 }
 .slider__top-btn_active::after {
-  content: "";
+  content: url(../images/slider-img.svg);
   position: absolute;
-  width: 30px;
-  height: 30px;
-  top: -48px;
+  transform: rotate(90deg);
+  top: -96px;
   left: 6px;
-  background: #ff6647;
-  border-radius: 50%;
   z-index: 0;
 }
-.slider__top-btn_active::before {
+/* .slider__top-btn_active::before {
   content: "";
   position: absolute;
   background: #ff6647;
@@ -289,7 +303,7 @@
   top: -83px;
   left: -4px;
   border-radius: 46%;
-}
+} */
 .slider {
   position: relative;
 }
@@ -302,6 +316,7 @@
 .swiper {
   padding-top: 75px;
   margin-top: -10px;
+  padding-bottom: 60px;
 }
 .slider__title {
   margin-top: 55px;
@@ -338,7 +353,6 @@
   /* display: flex;
   justify-content: space-between;
   align-items: center; */
-  margin-top: 60px;
   padding-left: 35px;
   padding-right: 40px;
   display: grid;
@@ -354,6 +368,9 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
+}
+.friends__header {
+  margin-bottom: 18px;
 }
 .friends__img,
 .members__img {
@@ -487,7 +504,7 @@ canvas {
 }
 .right-content__top-img-title {
   max-width: 330px;
-  font-family: Sofia Pro, sans-serif;
+  font-family: SofiaPro, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -501,7 +518,7 @@ canvas {
   align-items: center;
 }
 .right-content__info {
-  font-family: Sofia Pro, sans-serif;
+  font-family: SofiaPro, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -533,7 +550,7 @@ canvas {
   box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
 }
 .right-content__how-much {
-  font-family: Sofia Pro, sans-serif;
+  font-family: SofiaPro, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
@@ -548,7 +565,7 @@ canvas {
   justify-content: space-between;
 }
 .right-content__item span {
-  font-family: Sofia Pro, sans-serif;
+  font-family: SofiaPro, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -577,7 +594,7 @@ canvas {
   margin-bottom: 25px;
 }
 .rights__photos-top-title {
-  font-family: Sofia Pro, sans-serif;
+  font-family: SofiaPro, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -813,4 +830,17 @@ img.hover-shadow {
 }
 .menu {
   background: #f6f7fb;
+}
+canvas {
+  width: 100% !important;
+}
+
+.menu__items {
+  opacity: 0;
+  transition: 2s;
+}
+.menu__items.open {
+  display: flex;
+  opacity: 1;
+  transition: 2s;
 }

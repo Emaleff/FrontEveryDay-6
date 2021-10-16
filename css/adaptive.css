@@ -15,10 +15,28 @@
   }
   .right-content__btn {
     display: flex;
-    margin: 6px;
+    margin: 8px;
   }
   .right-content__how-much {
     font-size: 18px;
+    margin-top: 10px;
+  }
+  .right-content__actions {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .right-content__property {
+    flex-direction: column;
+    align-items: center;
+  }
+  .right-content__property-item {
+    margin: 10px;
+  }
+  .right-content__property-item:first-child {
+    order: 3;
+  }
+  .right-content__property-item:last-child {
+    order: 2;
   }
 }
 @media screen and (max-width: 1235px) {
@@ -36,6 +54,9 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .members__header {
+    margin-top: 25px;
+  }
   .center-content {
     min-width: 100%;
   }
@@ -91,6 +112,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .slider__top-btn_active::after {
+    display: none;
+  }
   .slider__top-buttons {
     margin-top: 10px;
     position: static;
