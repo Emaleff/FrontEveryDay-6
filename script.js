@@ -331,6 +331,6 @@ burger.addEventListener("click", () => {
   menu.classList.toggle("open");
 });
 
-menu.addEventListener("click", () => {
-  menu.classList.remove("open");
-});
+// menu.addEventListener("click", () => {
+//   menu.classList.remove("open");
+// });

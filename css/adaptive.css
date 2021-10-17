@@ -66,8 +66,13 @@
 }
 
 @media screen and (max-width: 975px) {
+  .menu__items.open {
+    display: flex;
+    opacity: 1;
+    transition: 2s;
+  }
   .menu__items {
-    /* display: none; */
+    display: none;
     display: flex;
     opacity: 0;
     flex-direction: row;

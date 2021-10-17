@@ -836,11 +836,7 @@ canvas {
 }
 
 .menu__items {
-  opacity: 0;
-  transition: 2s;
-}
-.menu__items.open {
-  display: flex;
   opacity: 1;
   transition: 2s;
 }
+
