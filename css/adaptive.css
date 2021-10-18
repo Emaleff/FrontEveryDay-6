@@ -71,15 +71,7 @@
     opacity: 1;
     transition: 2s;
   }
-  .menu__items {
-    display: none;
-    display: flex;
-    opacity: 0;
-    flex-direction: row;
-    transition: 5s;
-    align-items: center;
-    padding-top: 0;
-  }
+
   .menu__options {
     display: flex;
     justify-content: space-around;
@@ -97,11 +89,7 @@
   .menu__burger svg {
     margin: 20px;
   }
-  .menu__items.open {
-    display: flex;
-    opacity: 1;
-    transition: 5s;
-  }
+
   .container {
     display: block;
   }
