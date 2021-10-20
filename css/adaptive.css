@@ -1,3 +1,8 @@
+@media screen and (max-width: 1600px) {
+  .slider__top-btn_active::after {
+    top: -98px;
+  }
+}
 @media screen and (max-width: 1330px) {
   .carousel-row--img {
     width: 80px;
@@ -46,9 +51,6 @@
   .right-content__property-item {
     margin: 5px;
   }
-  .container {
-    grid-template-columns: 100px 2fr 1fr;
-  }
   .menu {
     width: 100px;
   }
@@ -83,7 +85,7 @@
     width: 100%;
   }
   .menu__burger {
-    width: 100%;
+    width: 90px;
     justify-content: left;
   }
   .menu__burger svg {
@@ -102,6 +104,11 @@
   }
   .right-content__property {
     display: flex;
+  }
+}
+@media screen and (max-width: 900px) {
+  .wrapper {
+    display: block;
   }
 }
 @media screen and (max-width: 600px) {

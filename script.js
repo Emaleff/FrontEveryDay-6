@@ -326,9 +326,10 @@ function showAndClose() {
 
 const burger = document.getElementById("burger");
 const menu = document.querySelector(".menu__items");
-
+const wrapper = document.getElementById("wrapper");
 burger.addEventListener("click", () => {
   menu.classList.toggle("open");
+  wrapper.classList.toggle("addMenu");
 });
 
 // menu.addEventListener("click", () => {
